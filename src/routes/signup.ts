@@ -25,7 +25,6 @@ router.post(
   ],
   validateRequest,
   async (req: Request, res: Response) => {
-    console.log('attempting to create user');
 
     const { email, password } = req.body;
 
@@ -40,7 +39,6 @@ router.post(
     // Create user
     const user = User.build({ email, password });
     await user.save();
-    console.log('User created');
 
     // generate JWT
 

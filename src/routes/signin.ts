@@ -34,7 +34,6 @@ router.post(
     // Check if user exists
     const existingUser = await User.findOne({ email });
     if (!existingUser) {
-      console.log('Invalid credentials');
       throw new BadRequestError('Invalid credentials');
     }
 
@@ -44,7 +43,6 @@ router.post(
       password
     );
     if (!passwordsMatch) {
-      console.log('Invalid credentials');
       throw new BadRequestError('Invalid credentials');
     }
 
