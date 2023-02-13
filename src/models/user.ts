@@ -3,6 +3,7 @@ import { Password } from '../services/password';
 
 // An interface that describes what it takes to create a user
 interface IUserAttrs {
+  username: string;
   email: string;
   password: string;
 }
@@ -15,6 +16,7 @@ interface IUserModel extends mongoose.Model<IUserDoc> {
 
 // An interface that describes the properties a user document has
 interface IUserDoc extends mongoose.Document {
+  username: string;
   email: string;
   password: string;
 }
@@ -23,6 +25,10 @@ interface IUserDoc extends mongoose.Document {
 // You can tell the difference because the type is Capitalized
 const userSchema = new mongoose.Schema(
   {
+    username: {
+      type: String,
+      required: true,
+    },
     email: {
       type: String,
       required: true,

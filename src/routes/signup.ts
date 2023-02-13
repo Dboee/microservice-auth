@@ -22,11 +22,11 @@ router.post(
       .trim()
       .isLength({ min: 4, max: 20 })
       .withMessage('Password must be between 4 and 20 characters'),
+    body('username').isString().withMessage('Username must be a string'),
   ],
   validateRequest,
   async (req: Request, res: Response) => {
-
-    const { email, password } = req.body;
+    const { username, email, password } = req.body;
 
     // Check if user already exists
     const existingUser = await User.findOne({ email });
@@ -37,11 +37,10 @@ router.post(
     // Hash the password
 
     // Create user
-    const user = User.build({ email, password });
+    const user = User.build({ username, email, password });
     await user.save();
 
     // generate JWT
-
     const userJwt = jwt.sign(
       // payload
       {
