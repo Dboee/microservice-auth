@@ -46,6 +46,7 @@ router.post(
       // payload
       {
         id: user.id,
+        username: user.username,
         email: user.email,
       },
       // secret, the "!" is a typescript assertion that the variable is defined
