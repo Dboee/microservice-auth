@@ -4,7 +4,7 @@
 //DB
 import mongoose from 'mongoose';
 
-import { DatabaseConnectionError } from './errors/database-connection-error';
+import { DatabaseConnectionError } from '@delight-system/microservice-common';
 
 import { app, port } from './app';
 

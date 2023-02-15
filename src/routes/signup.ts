@@ -4,10 +4,10 @@ import { body } from 'express-validator';
 
 // Middlewares
 import jwt from 'jsonwebtoken';
-import { validateRequest } from '../middlewares/validate-request';
+import { validateRequest } from '@delight-system/microservice-common';
 
 // Errors
-import { BadRequestError } from '../errors/bad-request-error';
+import { BadRequestError } from '@delight-system/microservice-common';
 
 // DB
 import { User } from '../models/user';

@@ -15,9 +15,8 @@ import { signupRouter } from './routes/signup';
 import { signoutRouter } from './routes/signout';
 
 // Middlewares
-import { errorHandler } from './middlewares/error-handler';
-import { NotFoundError } from './errors/not-found-error';
-import { DatabaseConnectionError } from './errors/database-connection-error';
+import { errorHandler } from '@delight-system/microservice-common';
+import { NotFoundError } from '@delight-system/microservice-common';
 
 // setup
 const port = 3000;

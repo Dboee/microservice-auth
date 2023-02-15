@@ -3,10 +3,10 @@ import express, { Request, Response } from 'express';
 import { body } from 'express-validator';
 
 // Errors
-import { BadRequestError } from '../errors/bad-request-error';
+import { BadRequestError } from '@delight-system/microservice-common';
 
 // Middlewares
-import { validateRequest } from '../middlewares/validate-request';
+import { validateRequest } from '@delight-system/microservice-common';
 import jwt from 'jsonwebtoken';
 
 // Services
