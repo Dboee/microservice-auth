@@ -52,6 +52,7 @@ router.post(
       {
         id: existingUser.id,
         email: existingUser.email,
+        username: existingUser.username,
       },
       // secret
       process.env.JWT_KEY!
